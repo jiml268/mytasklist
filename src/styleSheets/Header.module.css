@@ -1,0 +1,103 @@
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+        align-items: center;
+}
+
+.header_text{
+    font-size: 40px;
+        line-height: 2.5rem;
+        font-weight: 400;
+    margin-right: 10px;
+
+}
+
+.boardDesc{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 15px;
+margin-bottom: 35px;
+}
+
+.boardDescText{
+font-size: 16px;
+    line-height: 1rem;
+    font-weight: 400;
+
+}
+
+.headerIcon{
+    height: 32px;
+    width: 32px;
+    margin-right: 16px;
+}
+
+.headerEdit{
+    border: none;
+    background-color: white;
+    width: 19px;
+    height: 19px;
+}
+
+ .pageButtons {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+justify-content: center; 
+margin-bottom: 10px;}
+
+ .deleteButton {
+     width: 105px;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     align-items: center;
+     justify-content: center;
+     border-radius: 15px;
+     background-color: #97A3B6;
+     color: white;
+     padding: 5px 25px;
+ }
+
+
+ .deleteText {
+     margin-right: 7px;
+
+ }
+
+ .deleteicon {
+     width: 15px;
+     height: 20px;
+ }
+
+ .saveButton {
+     width: 100px;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     align-items: center;
+     justify-content: center;
+     border-radius: 15px;
+     background-color: #3662E3;
+     color: white;
+     padding: 5px 25px;
+     margin-left: 15px;
+ }
+
+
+ .saveText {
+     margin-right: 7px;
+
+ }
+
+ .saveicon {
+     width: 15px;
+     height: 20px;
+ }
