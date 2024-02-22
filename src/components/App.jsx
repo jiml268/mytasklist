@@ -1,16 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
+import TaskBoard from '../pages/TaskBoard'
+
 export const App = () => {
+
+  
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+   <div className="App">
+      <Routes>
+        <Route path="/" element={<TaskBoard />} />
+        <Route path="/:id" element={<TaskBoard />} />
+
+        <Route path="*" element={<p>Path not resolved</p>} />
+       </Routes>
+      </div>
   );
 };

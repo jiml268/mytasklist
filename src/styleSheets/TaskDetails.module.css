@@ -1,0 +1,295 @@
+.modal_container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.editPage{
+    padding: 15px;
+    width: 576px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 auto;
+        background-color: white;
+        border-radius: 15px;
+
+}
+.header{
+    display: flex;
+    flex-direction: row;
+justify-content: space-between;
+   
+    align-items: center
+}
+
+.header_text{
+    font-size: 16px;
+        line-height: 1rem;
+        font-weight: 500;
+        color: black;
+}
+
+.headerbutton{
+    width: 38px;
+    height: 38px;
+border-style: solid;
+    border-color: #E9EDF1;
+    background-color: white;
+    border-radius: 11px;
+}
+
+.closeImage{
+    height: 13px;
+    width: 13px;
+}
+
+.taskName{
+    width: 537px;
+    height: 40px;
+    border-style: solid;
+        border-color: #E9EDF1;
+        background-color: white;
+        border-radius: 11px;
+        margin-bottom: 20px;
+        padding: 12px;
+}
+
+.taskDesc {
+    width: 537px;
+    border-style: solid;
+    border-color: #E9EDF1;
+    background-color: white;
+    border-radius: 11px;
+    resize: none;
+            margin-bottom: 20px;
+        padding: 12px;
+}
+
+.taskName::placeholder, .taskDesc::placeholder {
+    font-size: 12px;
+        line-height: .75rem;
+        font-weight: 500;
+        /* padding: 12px ; */
+    color: #97A3B6;
+}
+
+.taskName:hover, .taskName:focus, .taskDesc:hover, .taskDesc:focus{
+    border-color: #3662E3;
+    outline: none
+}
+
+.taskinfo{
+    text-align: left;
+    margin-top: 30px;
+        color: #97A3B6;
+    }
+
+    .status{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+        .statusButton{
+width: 260px ;
+height: 48px;
+display: flex;
+flex-direction: row;
+border-style: solid;
+    border-color: #E9EDF1;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 12px;
+        justify-content: center;
+        align-items: center;
+        }
+.statusButtonnotactive {
+border-color: #E9EDF1;
+}
+
+.statusButtonactive {
+    border-color: blue;
+}
+
+
+        .statusiconbox{
+            width: 38px;
+            height: 38px;
+                display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 12px;
+                
+        }
+
+        .statusicon{
+            height: 19px;
+            width: 19px;
+        }
+
+        .statustext{
+            width: 185px;
+            font-size: 16px;
+                line-height: 1rem;
+                font-weight: 500;
+                color: #000000;
+                text-align: left;
+                margin-left: 10px;
+        }
+
+       
+
+        .checkBoxActive{height: 17px;
+        width: 17px;
+        display: flex;
+        background-color: blue;
+        border-radius: 25px;
+        align-items: center;
+    }
+
+         .checkBoxNoActive {
+             height: 17px;
+             width: 17px;
+             display: flex;
+             background-color: white;
+         }
+
+        .checkMark{
+           
+            height: 15px;
+            width: 15px;
+        }
+
+        .taskstatus{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+
+
+ .statusButton:nth-child(3){
+    margin-top: 5px;
+ }
+
+ .pageButtons{
+    margin-top: 112px;
+    display: flex;
+    flex-direction: row;
+        align-items: center;
+            justify-content: flex-end;
+ }
+
+ .deleteButton{
+width: 105px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #97A3B6;
+    color: white;
+    padding: 5px 25px;
+}
+ 
+
+ .deleteText{
+margin-right: 7px;
+
+ }
+
+ .deleteicon{
+width: 15px;
+height: 20px;
+ }
+
+ .saveButton {
+     width: 100px;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     align-items: center;
+     justify-content: center;
+     border-radius: 15px;
+     background-color: #3662E3;
+     color: white;
+     padding: 5px 25px;
+     margin-left: 15px;
+ }
+
+
+ .saveText {
+     margin-right: 7px;
+
+ }
+
+ .saveicon {
+     width: 15px;
+     height: 20px;
+ }
+
+ .taskicons{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+ }
+
+
+ .iconBoxActive{
+    height: 42px;
+    width: 42px;
+    background-color: #E9A23B;
+    border-radius: 15px;
+    border: 1px #E9A23B ;
+    margin-right: 12px;
+
+ }
+
+ .iconBoxNoActive{
+    height: 42px;
+    width: 42px;
+    background-color: #E3E8EF;
+    border-radius: 15px;
+    border: 1px #E3E8EF;
+margin-right: 12px;
+}
+
+ .iconPict{
+    height: 22px;
+    width: 22px;
+ }
+
+ .iconList{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+
+ }
+
+ .iconText{font-size: 16px;
+    line-height: 1rem;
+    font-weight: 500;
+    color: black;
+
+ }
+
+ .statussection{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .taskInfoName{
+    font-size: 12px;
+        line-height: .75rem;
+        font-weight: 500;
+        color: #DADEE5;
+ }
