@@ -1,16 +1,20 @@
-import ShowAllTasks from "./ShowAllTasks"
-import TaskEdit from "./TaskEdit"
-import { useSelector } from 'react-redux';
-import { getUserID,  } from '../redux/tasks/tasksSelectors'
+import EditHeader from '../components/Header/EditHeader'
+import DisplayHeader from '../components/Header/DisplayHeader'
+import { useState } from 'react';
+
 
 function TaskBoard() {
-        const  userID = useSelector(getUserID)
-    console.log('id', userID)
-    
+    const [editHeader, seteditHeader]  =  useState(false)
+   
+    const handleChange = () => {
+                console.log('handleChange')
+
+        seteditHeader(editHeader => !editHeader);
+        console.log('editHeader', editHeader)
+  };
     return (
         <>
-            {userID === 1 && <ShowAllTasks />}
-            {userID === 2 && <TaskEdit />}
+            {!editHeader? <DisplayHeader handleChange={handleChange} />:<EditHeader handleChange={handleChange} />}
 
         </>
     )

@@ -1,7 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-      Taskheading: {},
+  Taskheading: {
+    _id: "65c5034488306414d4cf9f8e",
+    user_id: 1,
+    boardName: "My Task Board",
+    boardDescription: "Tasks to keep organise"
+},
     userID: 1,
         isloading: false
 };
