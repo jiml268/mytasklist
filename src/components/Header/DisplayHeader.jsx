@@ -1,7 +1,8 @@
 import Logo from '../../images/logo.svg';
 import EditSVG from '../../images/Edit_duotone.svg';
 import styles from '../../styleSheets/Header.module.css'; 
-import { useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
+
 import { getCurrentTaskheading,  } from '../../redux/tasks/tasksSelectors'
 
 function DisplayHeader({ handleChange }) {
