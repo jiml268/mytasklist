@@ -2,13 +2,14 @@ import Logo from '../../images/logo.svg';
 import checkMark from '../../images/Done_round_duotone.svg'
 import canc from '../../images/close_ring_duotone-1.svg'
 import styles from '../../styleSheets/Header.module.css'; 
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-
-import { getCurrentTaskheading,  } from '../../redux/tasks/tasksSelectors'
+import { editHeader, getheader } from '../../redux/tasks/tasksOperators';
+import { getCurrentTaskheading, getUserID,  } from '../../redux/tasks/tasksSelectors'
 
 function EditHeader({ handleChange }) {
-
+    const dispatch = useDispatch()
+    const  getCurrentID = useSelector(getUserID)
     const boardInfo = useSelector(getCurrentTaskheading)
     const [holdInfo, setHoldInfo] = useState(boardInfo)
     
@@ -21,7 +22,20 @@ function EditHeader({ handleChange }) {
     }
  
     const closeTaskDetail = async (value) => {
-         if (value === 'Save') {
+        if (value === 'Save') {
+            if (holdInfo !== boardInfo) {
+                 const updatedHeader = {
+                      task_id: holdInfo._id,
+                      boardName: holdInfo.boardName,
+                      boardDescription: holdInfo.boardDescription
+                 }
+                 const result = await dispatch(editHeader(updatedHeader))
+                 if (result.meta.requestStatus === "fulfilled") {
+                      const currentID = { user_id: getCurrentID }
+                     await dispatch(getheader(currentID))
+                 }
+             
+             }
             
              console.log('header will update') 
         }
@@ -37,13 +51,14 @@ handleChange()
             
 
             <div className={styles.header}>
+                <h3 className={`${styles.boardDescText} ${styles.heading}`} style={{marginBottom: '10px'}}> Edit Board Name and/or Board Description</h3>
                 <div className={styles.heading}>
                     <img className={styles.headerIcon} src={Logo} alt="logo" />
                    
-                        <input className={styles.header_text} name="boardName" value = {holdInfo.boardName} onChange={changeHandler} />
+                    <input className={`${styles.header_text} ${styles.editFields}`} name="boardName" value = {holdInfo.boardName} onChange={changeHandler} />
             </div>
                 <div className={styles.boardDesc}>
-                    <input className={styles.boardDescText} name="boardDescription" value = {holdInfo.boardDescription} onChange={changeHandler} />
+                    <input className={`{styles.boardDescText}  ${styles.editFields}`} name="boardDescription" value = {holdInfo.boardDescription} onChange={changeHandler} />
                 </div>
             </div>
             <div className={styles.pageButtons}>
