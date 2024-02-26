@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/mytasklist/static/css/main.95162311.css",
-    "main.js": "/mytasklist/static/js/main.da17e1a1.js",
+    "main.css": "/mytasklist/static/css/main.156aabd3.css",
+    "main.js": "/mytasklist/static/js/main.add69df1.js",
     "static/media/Edit_duotone.svg": "/mytasklist/static/media/Edit_duotone.7a1c7929823502697f6e4d2edb21550a.svg",
     "static/media/logo.svg": "/mytasklist/static/media/logo.85094ba6b785abf7e71da9049e3f0417.svg",
     "index.html": "/mytasklist/index.html",
+    "static/media/Time_atack_duotone.svg": "/mytasklist/static/media/Time_atack_duotone.881780fc02a3fc7c9e7545ae05e9dc28.svg",
     "static/media/close_ring_duotone-1.svg": "/mytasklist/static/media/close_ring_duotone-1.56e478933052d11790b377085d7b7259.svg",
     "static/media/Done_round_duotone.svg": "/mytasklist/static/media/Done_round_duotone.186079eab35fde619a1e43f72dfe06c4.svg",
-    "main.95162311.css.map": "/mytasklist/static/css/main.95162311.css.map",
-    "main.da17e1a1.js.map": "/mytasklist/static/js/main.da17e1a1.js.map"
+    "main.156aabd3.css.map": "/mytasklist/static/css/main.156aabd3.css.map",
+    "main.add69df1.js.map": "/mytasklist/static/js/main.add69df1.js.map"
   },
   "entrypoints": [
-    "static/css/main.95162311.css",
-    "static/js/main.da17e1a1.js"
+    "static/css/main.156aabd3.css",
+    "static/js/main.add69df1.js"
   ]
 }
