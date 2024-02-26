@@ -1,10 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {getheader,editHeader } from './tasksOperators'
+import {getheader,editHeader, getTasks } from './tasksOperators'
 
 const initialState = {
-  Taskheading: {},
-    userID: 1,
-        isloading: false
+      Taskheading: {},
+      Tasklist: [],
+        userID: 1,
+        isloading: false,
+        editTaskNo: null
 };
 
 const taskSlice = createSlice({
@@ -13,7 +15,12 @@ const taskSlice = createSlice({
         reducers: {
                 setID: (state, action) => {
        state.userID =action.payload 
-          },
+                },
+                SetEditIndex: (state, action) => {
+                        console.log('action', action)
+                        state.editTaskNo = action.payload 
+                         console.log('state.editTaskNo', state.editTaskNo)
+                },
     },
          extraReducers: builder =>
         builder
@@ -48,9 +55,23 @@ const taskSlice = createSlice({
       state.isloading = false
         
       }
-      )   
+            )   
+          .addCase(getTasks.pending, (state, action) => { state.isloading = true;})
+                  .addCase(getTasks.fulfilled, (state, action) => {
+                          if (action.payload.code === 200) {
+                                  state.Tasklist = action.payload.data
+                          }      
+
+                          state.isloading = false
+                          
+      })
+              .addCase(getTasks.rejected, (state, action) => {
+      state.isloading = false
+        
+      }
+            )
          
 });
-         export const { setID,   } = taskSlice.actions;
+         export const { setID, SetEditIndex  } = taskSlice.actions;
   
 export const taskReducer = taskSlice.reducer;

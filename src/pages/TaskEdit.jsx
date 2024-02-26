@@ -1,5 +1,5 @@
 import { useDispatch,  } from 'react-redux';
-import { setID } from "../redux/tasks/tasksSlice";
+import { SetEditIndex } from "../redux/tasks/tasksSlice";
 import { useSelector } from 'react-redux';
 import { getUserID, } from '../redux/tasks/tasksSelectors'
 
@@ -10,7 +10,8 @@ function TaskEdit() {
    
     
 const addNewTask = () => {
-      dispatch(setID(1))
+              dispatch(SetEditIndex(null))
+
 }
 
 
