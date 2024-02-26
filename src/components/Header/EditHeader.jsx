@@ -37,10 +37,8 @@ function EditHeader({ handleChange }) {
              
              }
             
-             console.log('header will update') 
         }
-       console.log('boardInfo', boardInfo)
-       console.log('holdInfo', holdInfo)
+      
 handleChange()
        
 

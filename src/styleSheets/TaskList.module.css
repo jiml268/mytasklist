@@ -1,0 +1,124 @@
+.working{
+    background-color: #F5D565;
+   
+}
+.done {
+    background-color: #A0ECB1;
+    
+}
+.notdoing {
+    background-color: #F7D4D3;
+   
+}
+.noStatus {
+    background-color: #E3E8EF;
+    
+}
+
+.taskicon{
+    height: 19px;
+    width: 19px;
+    
+}
+
+.taskName{ 
+   
+    font-size: 20px;
+        line-height: 1.25rem;
+        font-weight: 600;
+}
+
+.taskstatus{
+    height: 30px;
+        width: 30px;
+}
+
+.listitem{
+display: flex;
+    flex-direction: column;
+    width: 525px;
+padding: 10px 15px;
+    
+    border-radius: 25px;
+    margin: 0 auto 15px auto;
+}
+
+.taskHeading{
+    display: flex;
+    flex-direction: row;
+align-items: center;
+margin: 0 auto;
+}
+
+.taskDetails{
+    display: flex;
+        flex-direction: row;
+        width: 365px;
+       
+}
+
+.iconSize{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+
+}
+
+.taskInfo{
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    text-align: left;
+    margin-left: 15px;
+    margin-right: 97px;
+}
+
+.taskDesc{
+    font-size: 14px;
+        line-height: .875rem;
+        font-weight: 500;
+        text-align: left;
+            margin-left: 65px
+}
+
+.taskstatusbox{
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    display: flex;
+        align-items: center;
+            justify-content: center;
+}
+
+.taskstatus{
+    height: 22px;
+    width: 22px;
+}
+
+.workingstatus{
+    background-color: #E9A23B;
+}
+
+
+.notdoingstatus{
+        background-color: #DD534C;
+}
+
+.noStatusstatus{
+        background-color: #E3E8EF;
+}
+
+
+.donestatus{
+        background-color: #42D964;
+}
+
+ .iconPict {
+     height: 22px;
+     width: 22px;
+ }
+

@@ -37,7 +37,6 @@ export const editHeader = createAsyncThunk(
 export const getTasks = createAsyncThunk(
   'user/getTasks',
     async  (credentials, { dispatch, rejectWithValue }) => {
-console.log('credentials', credentials)
     try {
       const response = await axios.post(
         `getTasks`, credentials

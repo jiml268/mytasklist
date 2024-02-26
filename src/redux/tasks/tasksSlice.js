@@ -4,8 +4,9 @@ import {getheader,editHeader, getTasks } from './tasksOperators'
 const initialState = {
       Taskheading: {},
       Tasklist: [],
-    userID: 1,
-        isloading: false
+        userID: 1,
+        isloading: false,
+        editTaskNo: null
 };
 
 const taskSlice = createSlice({
@@ -14,7 +15,12 @@ const taskSlice = createSlice({
         reducers: {
                 setID: (state, action) => {
        state.userID =action.payload 
-          },
+                },
+                SetEditIndex: (state, action) => {
+                        console.log('action', action)
+                        state.editTaskNo = action.payload 
+                         console.log('state.editTaskNo', state.editTaskNo)
+                },
     },
          extraReducers: builder =>
         builder
@@ -52,7 +58,6 @@ const taskSlice = createSlice({
             )   
           .addCase(getTasks.pending, (state, action) => { state.isloading = true;})
                   .addCase(getTasks.fulfilled, (state, action) => {
-                         console.log('getTasks.fulfilled')
                           if (action.payload.code === 200) {
                                   state.Tasklist = action.payload.data
                           }      
@@ -67,6 +72,6 @@ const taskSlice = createSlice({
             )
          
 });
-         export const { setID,   } = taskSlice.actions;
+         export const { setID, SetEditIndex  } = taskSlice.actions;
   
 export const taskReducer = taskSlice.reducer;
