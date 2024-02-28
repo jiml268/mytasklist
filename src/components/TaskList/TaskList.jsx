@@ -1,7 +1,8 @@
 import {useSelector, useDispatch } from 'react-redux';
-import { getTasklist,   } from '../../redux/tasks/tasksSelectors'
+import { getTasklist, } from '../../redux/tasks/tasksSelectors'
+import { setEditData} from '../../redux/tasks/tasksSlice'
 import styles from '../../styleSheets/TaskList.module.css'; 
-import { SetEditIndex } from "../../redux/tasks/tasksSlice";
+import { SetEditIndex, } from "../../redux/tasks/tasksSlice";
 import laptop from '../../images/laptop.png'
 import message from '../../images/message.png'
 import coffee from '../../images/coffee.png'
@@ -12,17 +13,16 @@ import InProgress from '../../images/Time_atack_duotone.svg'
 import completed from '../../images/Done_round_duotone.svg'
 import wontDo from '../../images/close_ring_duotone-1.svg'
 
+
 function TaskList() {
     const dispatch = useDispatch() 
     const getAllTask = useSelector(getTasklist)
     
     
     const taskClicked = (index) => {
-        console.log('task clicked')
-                         console.log('index', index)
-
-         dispatch(SetEditIndex(index))
-                 console.log('SetEditIndex', SetEditIndex)
+      dispatch(SetEditIndex(index))
+      const editTask = getAllTask[index]
+      dispatch(setEditData(editTask))
 
     }
 

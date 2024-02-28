@@ -1,26 +1,26 @@
-import { useDispatch,  } from 'react-redux';
-import { setID } from "../redux/tasks/tasksSlice";
 import { useSelector } from 'react-redux';
-import { getUserID, } from '../redux/tasks/tasksSelectors'
+import { useState, } from 'react';
+import EditHeader from '../components/Header/EditHeader'
+import DisplayHeader from '../components/Header/DisplayHeader'
+import { getTasklist, } from '../redux/tasks/tasksSelectors'
+import TaskList from '../components/TaskList/TaskList';
 
 function ShowAllTasks() {
-    const dispatch = useDispatch()
-     const  userID = useSelector(getUserID)
-   
+    const getAllTasks = useSelector(getTasklist)
+    const [editHeader, seteditHeader] = useState(false)
     
-const addNewTask = () => {
-      dispatch(setID(2))
-}
+    const handleChange = () => {
 
-
+        seteditHeader(editHeader => !editHeader);
+  };
 
     
     return (
         <div>
-            <h1> ShowAllTasks</h1>
-            <h2> Id is {userID}</h2>
-            <button 
-        onClick={addNewTask}>go to taskedit</button>
+{!editHeader ? <DisplayHeader handleChange={handleChange} /> : <EditHeader handleChange={handleChange} />}
+ {typeof taskToBeEdited !== 'number' && getAllTasks.length > 0 && < TaskList />}
+             {typeof taskToBeEdited !== 'number' && getAllTasks.length  === 0 &&  <h3>No task to display</h3>}
+            
             </div>
 
         )
