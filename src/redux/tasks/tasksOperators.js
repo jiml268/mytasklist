@@ -36,12 +36,40 @@ export const editHeader = createAsyncThunk(
 
 export const getTasks = createAsyncThunk(
   'user/getTasks',
-    async  (credentials, { dispatch, rejectWithValue }) => {
+  async (credentials, { dispatch, rejectWithValue }) => {
+      console.log('credentials', credentials)
     try {
       const response = await axios.post(
         `getTasks`, credentials
       );
       return response.data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
+export const editTask = createAsyncThunk(
+  'user/editTask',
+  async (credentials, { dispatch, rejectWithValue }) => {
+    try {
+      const response = await axios.post(
+        `editTask`, credentials
+      );
+      return response.data.data.result;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+export const deleteTask = createAsyncThunk(
+  'user/deleteTask',
+     async (credentials, { dispatch, rejectWithValue }) => {
+    try {
+      const response = await axios.post(
+        `deleteTask`, credentials
+      );
+      return response.data.data.result;
     } catch (error) {
       return rejectWithValue(error.message);
     }

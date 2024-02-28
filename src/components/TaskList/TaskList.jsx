@@ -42,7 +42,7 @@ function TaskList() {
                          {(() => {
         switch (task.icon) {
           case 'message':
-            return  <img className={styles.iconPict} src={message} alt="message bubble" />
+            return  <img className={styles.iconPict} src={message} alt="message bubble"  />
  
           case 'laptop':
             return  <img className={styles.iconPict} src={laptop} alt="Working on laptop" />
@@ -65,12 +65,13 @@ function TaskList() {
                 <h3 className={styles.taskName}>{task.taskTitle}</h3>
                 
             </div>
-            <div className={ ` ${styles.statbox}  ${task.stat === "working" ? styles.workingstatus :
+            <div className={ `  ${task.stat === "working" ? styles.workingstatus :
             task.stat === "done" ? styles.donestatus :
                 task.stat === "notdoing" ? styles.notdoingstatus : styles.noStatusstatus} `}>
-            {task.stat !== "none" && 
-                <img className={styles.stat} src={task.stat === "working" ? InProgress :
-                    task.stat === "done" ? completed : wontDo} alt="alarm clock" />
+            {task.stat !== "none" ?
+                <img  src={task.stat === "working" ? InProgress :
+                task.stat === "done" ? completed : wontDo} alt="alarm clock" /> :
+              <div style={{height: '20px', width: '20px'}}></div>
             }
             </div>
             </div>

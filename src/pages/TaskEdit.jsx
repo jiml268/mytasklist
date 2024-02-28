@@ -10,14 +10,16 @@ import { Dialog } from "@mui/material";
 import { getEditData } from '../redux/tasks/tasksSelectors'
 import { useState, } from 'react';
 import { useEffect } from 'react';
-
+import { getTasklist, geteditIndex } from '../redux/tasks/tasksSelectors'
+import {editTask, deleteTask, getTasks} from '../redux/tasks/tasksOperators'
 
 function TaskEdit({ modalOpen }) {
     const dispatch = useDispatch()
 
 
     // const [taskData  = useSelector(getEditData)
-  
+    const getAllTask = useSelector(getTasklist)
+    const currentTask = useSelector(geteditIndex)
     const currentEditTask = useSelector(getEditData)
     const [taskData, setTaskdata] = useState({})
     
@@ -31,11 +33,35 @@ function TaskEdit({ modalOpen }) {
     const closeTaskDetail = async (value) => {
 
         if (value === 'Save') {
-            console.log('save')
+               if (taskData !== getAllTask[currentTask]) {
+                   const updatedTask = {
+                        
+                       task_id: taskData._id,
+                       user_id: taskData.user_id,
+                      taskTitle: taskData.taskTitle,
+                       task_description: taskData.task_description,
+                       icon: taskData.icon,
+                      stat: taskData.stat,
+                   }
+                   const result = await dispatch(editTask(updatedTask))
+                   if (result.meta.requestStatus === "fulfilled") {
+                     await dispatch(getTasks({ user_id: taskData.user_id}))
+                 }
+             
+               }
         }
- if (value === 'Delete') {
-            console.log('Delete')
+        if (value === 'Delete') {
+           const deleteATask = {
+                       task_id: taskData._id,
+                   }
+            const result = await dispatch(deleteTask(deleteATask))
+            console.log(result)
+                   if (result.meta.requestStatus === "fulfilled") {
+                       await dispatch(getTasks({ user_id: taskData.user_id }))
+                 }
         }
+       
+
 
      dispatch(SetEditIndex(null))
 }
