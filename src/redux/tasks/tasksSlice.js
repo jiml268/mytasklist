@@ -6,7 +6,9 @@ const initialState = {
       Tasklist: [],
         userID: 1,
         isloading: false,
-        editTaskNo: null
+        editTaskNo: null,
+        modalopen: false,
+        editData: {}
 };
 
 const taskSlice = createSlice({
@@ -17,9 +19,12 @@ const taskSlice = createSlice({
        state.userID =action.payload 
                 },
                 SetEditIndex: (state, action) => {
-                        console.log('action', action)
                         state.editTaskNo = action.payload 
-                         console.log('state.editTaskNo', state.editTaskNo)
+                        state.editTaskNo !== null ? state.modalopen = true : state.modalopen = false
+                },
+                setEditData: (state, action) => {
+                        state.editData = action.payload 
+
                 },
     },
          extraReducers: builder =>
@@ -72,6 +77,6 @@ const taskSlice = createSlice({
             )
          
 });
-         export const { setID, SetEditIndex  } = taskSlice.actions;
+         export const { setID, SetEditIndex, setEditData  } = taskSlice.actions;
   
 export const taskReducer = taskSlice.reducer;
