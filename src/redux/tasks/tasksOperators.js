@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'http://localhost:3030/api';
-// axios.defaults.baseURL = 'https://jl-mytasklist-1dfbe3341ef1.herokuapp.com/api'
+// axios.defaults.baseURL = 'http://localhost:3030/api';
+axios.defaults.baseURL = 'https://jl-mytasklist-1dfbe3341ef1.herokuapp.com/api'
 
 export const getheader = createAsyncThunk(
   'user/getheader',
