@@ -31,8 +31,10 @@ function AddTask() {
                  <img className={styles.addicon} src={AddTaskicon} alt="Add New Task" />
             </div>
             <div className={styles.addInfo}>
-                <h3 className={styles.addName}>add new task</h3>
-            </div>
+                     <h3 className={styles.addName}>add new task</h3>
+                     
+                 </div>
+                 <div style={{height: '42px', width: '42px'}}></div>
            </div>
         </button>
      

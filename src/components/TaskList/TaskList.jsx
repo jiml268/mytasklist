@@ -65,20 +65,24 @@ function TaskList() {
                 <h3 className={styles.taskName}>{task.taskTitle}</h3>
                 
             </div>
-            <div className={ `  ${task.stat === "working" ? styles.workingstatus :
+            <div className={ `${styles.statusbox}  ${task.stat === "working" ? styles.workingstatus :
             task.stat === "done" ? styles.donestatus :
                 task.stat === "notdoing" ? styles.notdoingstatus : styles.noStatusstatus} `}>
             {task.stat !== "none" ?
+              <div className={styles.statsize}>
                 <img  src={task.stat === "working" ? InProgress :
-                task.stat === "done" ? completed : wontDo} alt="alarm clock" /> :
+                  task.stat === "done" ? completed : wontDo} alt="alarm clock" />
+                </div>:
               <div style={{height: '20px', width: '20px'}}></div>
             }
             </div>
-            </div>
+        </div>
+        {console.log('task.stat', task.stat)}
+                {console.log('task.stat', task.stat)}
+
             {task.stat === "none" &&
                 <div className={styles.taskDetails}>
-               
-                    <h3 className={styles.taskDesc}>{task.TaskDesc}</h3>
+                    <h3 className={styles.taskDesc}>{task.task_description}</h3>
                 </div>}
         </button>
     return currentTask
