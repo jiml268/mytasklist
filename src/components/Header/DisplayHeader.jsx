@@ -19,6 +19,7 @@ const boardInfo =   useSelector(getCurrentTaskheading)
                     <button className={styles.headerEdit} onClick={handleChange}><img src={EditSVG} alt="Edit Heading" /></button>
             </div>
                 <div className={styles.boardDesc}>
+                     <div className={styles.headerIcon}></div> 
                     <h2 className={styles.boardDescText}>{boardInfo.boardDescription}</h2>
                 </div>
             </div>

@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
         align-items: center;
 }
 
@@ -21,7 +20,6 @@
 .boardDesc{
 display: flex;
 align-items: center;
-justify-content: center;
 margin-top: 15px;
 margin-bottom: 35px;
 }
@@ -103,6 +101,6 @@ margin-bottom: 10px;}
  }
 
  .editFields{
-    width: 600px;
+    width: 460px;
         padding: 10px
  }

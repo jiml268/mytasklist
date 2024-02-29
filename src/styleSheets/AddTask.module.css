@@ -1,0 +1,47 @@
+.additem{
+    display: flex;
+        flex-direction: row;
+        width: 526px;
+        margin: 0 auto;
+        padding: 15px;
+        align-items: center;
+        border-radius: 25px;
+        background-color: #F5E8D5;
+}
+
+.iconSize{
+    width: 40px;
+        height: 40px;
+        display: flex;
+        background-color: orange;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+}
+
+.addicon{
+    width: 20px;
+    height: 20px;
+}
+
+.addInfo{
+    display: flex;
+        flex-direction: column;
+        width: 290px;
+        text-align: left;
+        margin-left: 15px;
+            margin-right: 97px;
+}
+
+.addName{
+    font-size: 20px;
+        line-height: 1.25rem;
+        font-weight: 600;
+}
+
+.taskHeading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+}
