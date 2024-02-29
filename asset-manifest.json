@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mytasklist/static/css/main.dd8457f3.css",
-    "main.js": "/mytasklist/static/js/main.ec8fb21f.js",
+    "main.css": "/mytasklist/static/css/main.b1a49fb6.css",
+    "main.js": "/mytasklist/static/js/main.1af021e6.js",
     "static/media/alarm.png": "/mytasklist/static/media/alarm.84324e0702e913542f36.png",
     "static/media/books.png": "/mytasklist/static/media/books.57bdd4b3965799b2673a.png",
     "static/media/weightlift.png": "/mytasklist/static/media/weightlift.a4933b641713727b59c1.png",
@@ -15,11 +15,12 @@
     "static/media/Time_atack_duotone.svg": "/mytasklist/static/media/Time_atack_duotone.881780fc02a3fc7c9e7545ae05e9dc28.svg",
     "static/media/close_ring_duotone-1.svg": "/mytasklist/static/media/close_ring_duotone-1.56e478933052d11790b377085d7b7259.svg",
     "static/media/Done_round_duotone.svg": "/mytasklist/static/media/Done_round_duotone.186079eab35fde619a1e43f72dfe06c4.svg",
-    "main.dd8457f3.css.map": "/mytasklist/static/css/main.dd8457f3.css.map",
-    "main.ec8fb21f.js.map": "/mytasklist/static/js/main.ec8fb21f.js.map"
+    "static/media/Add_round_duotone.svg": "/mytasklist/static/media/Add_round_duotone.730af166256da2ec50d800816f28435f.svg",
+    "main.b1a49fb6.css.map": "/mytasklist/static/css/main.b1a49fb6.css.map",
+    "main.1af021e6.js.map": "/mytasklist/static/js/main.1af021e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd8457f3.css",
-    "static/js/main.ec8fb21f.js"
+    "static/css/main.b1a49fb6.css",
+    "static/js/main.1af021e6.js"
   ]
 }
