@@ -1,7 +1,7 @@
 .additem{
     display: flex;
         flex-direction: row;
-        width: 526px;
+        width: 550px;
         margin: 0 auto;
         padding: 15px;
         align-items: center;
@@ -10,8 +10,8 @@
 }
 
 .iconSize{
-    width: 40px;
-        height: 40px;
+    width: 43px;
+        height: 43px;
         display: flex;
         background-color: orange;
         justify-content: center;
@@ -27,7 +27,7 @@
 .addInfo{
     display: flex;
         flex-direction: column;
-        width: 290px;
+        width: 315px;
         text-align: left;
         margin-left: 15px;
             margin-right: 97px;
