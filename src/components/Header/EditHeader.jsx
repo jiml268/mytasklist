@@ -56,6 +56,7 @@ handleChange()
                     <input className={`${styles.header_text} ${styles.editFields}`} name="boardName" value = {holdInfo.boardName} onChange={changeHandler} />
             </div>
                 <div className={styles.boardDesc}>
+                     <div className={styles.headerIcon}></div> 
                     <input className={`{styles.boardDescText}  ${styles.editFields}`} name="boardDescription" value = {holdInfo.boardDescription} onChange={changeHandler} />
                 </div>
             </div>

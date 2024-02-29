@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {getheader,editHeader, getTasks, editTask,deleteTask,  } from './tasksOperators'
+import {getheader,editHeader, getTasks, editTask,deleteTask, createTask } from './tasksOperators'
 
 const initialState = {
       Taskheading: {},
@@ -97,8 +97,19 @@ console.log('state.Tasklist', state.Tasklist)
               .addCase(deleteTask.rejected, (state, action) => {
       state.isloading = false
         
+              }
+                      
+                )
+         .addCase(createTask.pending, (state, action) => { state.isloading = true;})
+              .addCase(createTask.fulfilled, (state, action) => {
+        state.isloading = false
+        
+      })
+              .addCase(createTask.rejected, (state, action) => {
+      state.isloading = false
+       
       }
-            )
+    )
          
 });
          export const { setID, SetEditIndex, setEditData  } = taskSlice.actions;
